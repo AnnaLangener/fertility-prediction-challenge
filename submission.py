@@ -90,7 +90,7 @@ def predict_outcomes(df, background_df=None, model_path="model.joblib"):
     model = joblib.load(model_path)
 
     # Preprocess the fake / holdout data
-    df = clean_df(df, background_df)
+    df = clean_df(df, background_df) 
 
     # IMPORTANT: the outcome `new_child` should NOT be in the data from this point onwards
     # get list of variables *without* the outcome:
