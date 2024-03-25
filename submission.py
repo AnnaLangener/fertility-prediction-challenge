@@ -45,11 +45,15 @@ def clean_df(df, background_df=None):
     df = df[~df["new_child"].isna()]
 
     # Selecting variables for modelling
-    keepcols = [
+  keepcols = [
         "nomem_encr",  # ID variable required for predictions,
         "age",  # newly created variable
+        "cf20m032",
         "new_child",
-    ]  # outcome variable
+        "cf20m033",
+        "cf14g035",
+        "cf14g037"
+    ]  # outcome variable# outcome variable
 
     # Keeping data with variables selected
     df = df[keepcols]
